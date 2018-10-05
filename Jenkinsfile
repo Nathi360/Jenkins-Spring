@@ -6,12 +6,6 @@ pipeline {
         stage('Build ') {
             steps {
                 sh 'make'
-                sh ''
-            }
-        }
-        stage('Test') {
-            steps {
-                
             }
         }
         stage('Deploy') {
