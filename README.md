@@ -9,7 +9,7 @@
 $ heroku container:login
 ```
 ##### Create a new registry application: 
-+ ###### NB: You need to link this new application to the github repository housing your Spring-boot application, do this manually: heroku-app-dashboard > Deploy > Deployment method
++ ###### NB: You need to link this new application to the github repository housing your Spring-boot application, do this manually via the heroku dashboard: heroku-app-dashboard > Deploy > Deployment method
 ```
 $ heroku create
 ```
