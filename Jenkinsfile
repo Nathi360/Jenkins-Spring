@@ -3,7 +3,13 @@ pipeline {
     agent any
     
     stages {
-        stage('Build ') {
+        stage('Build and push application container to Dockerhub') {
+            steps {
+                # To be run once for each new build of the application (new state/instance)
+                sh 'make docker-build'
+            }
+        }
+        stage('Build') {
             steps {
                 sh 'make'
             }
