@@ -4,23 +4,22 @@ pipeline {
     
     stages {
         /************** Production **************/
-        stage('Pull (and run) image from Dockerhub') {
+        stage('B U I L D') {
+            steps {
+                //sh 'make'
+                sh 'echo "Building application!"'
+            }
+        }
+        stage('T E S T') {
+            steps {
+                //sh 'make run'
+                sh 'echo "Testing application!"'
+            }
+        }
+        stage('D E P L O Y') {
             steps {
                 //docker run --rm -p <Port>:9090 countach/springboot-docker-jenkins
                 sh 'make docker-pull-run'
-            }
-        }
-        /************** Development **************/
-        stage('Build') {
-            steps {
-                //sh 'make'
-                sh 'traceroute localhost:5850'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                //sh 'make run'
-                sh 'curl localhost:5850'
             }
         }
     }
