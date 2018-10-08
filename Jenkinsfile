@@ -3,20 +3,24 @@ pipeline {
     agent any
     
     stages {
-        stage('Build and push application container to Dockerhub') {
+        /************** Production **************/
+        stage('Pull (and run) image from Dockerhub') {
             steps {
-                # To be run once for each new build of the application (new state/instance)
-                sh 'make docker-build'
+                # docker run --rm -p <Port>:9090 countach/springboot-docker-jenkins
+                sh 'make docker-pull-run'
             }
         }
+        /************** Development **************/
         stage('Build') {
             steps {
-                sh 'make'
+                # sh 'make'
+                sh 'traceroute localhost:5850'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'make run'
+                # sh 'make run'
+                sh 'curl localhost:5850'
             }
         }
     }
