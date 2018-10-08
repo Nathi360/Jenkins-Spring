@@ -4,8 +4,11 @@ make:
 run:
 	java -jar target/hybrid-1.0-SNAPSHOT.jar
 
-docker:
-	docker run -p 8000:9090 jenky
+docker-build:
+	docker build -t jenky-spring-docker .
+	
+docker-pull:
+	# Pull from DockerHub
 
 clean:
 	# Clean build
