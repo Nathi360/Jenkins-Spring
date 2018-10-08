@@ -8,7 +8,7 @@ docker-build:
 	# docker build -t jenky-spring-docker .
 	
 docker-pull-run:
-	docker run --rm -p 5850:9090 countach/springboot-docker-jenkins
+	docker run --rm -p 5850:9090 countach/springboot-docker-jenkins:jenky
 	
 clean:
 	# Clean build
