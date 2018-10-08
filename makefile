@@ -7,9 +7,9 @@ run:
 docker-build:
 	docker build -t jenky-spring-docker .
 	
-docker-pull:
-	# Pull from DockerHub
-
+docker-pull-run:
+	docker run --rm -p 5850:9090 countach/springboot-docker-jenkins
+	
 clean:
 	# Clean build
 
