@@ -1,10 +1,7 @@
 # Jenkins-Spring
+---
 
-#### Deploying a [dockerized](http://jasonwilder.com/blog/2014/10/13/a-simple-way-to-dockerize-applications/) Spring-boot application with Jenkins (and Heroku)
-
-![Imgur](https://i.imgur.com/ea3O10E.jpg)
-
-- ##### Dependencies include: [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), [Maven CLI](https://maven.apache.org/install.html), [Docker CLI](https://docs.docker.com/install/overview/), [Jenkins](https://jenkins.io/download/).
+#### Deploying a [dockerized](http://jasonwilder.com/blog/2014/10/13/a-simple-way-to-dockerize-applications/) Spring-boot application with [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), [Maven CLI](https://maven.apache.org/install.html), [Docker CLI](https://docs.docker.com/install/overview/) and [Jenkins](https://jenkins.io/download/)
 ---
 ##### Login to heroku container registry
 ```
@@ -57,3 +54,5 @@ docker-pull-run:
   ...
 
 ```
+---
+![Imgur](https://i.imgur.com/ea3O10E.jpg)
